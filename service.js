@@ -10,8 +10,7 @@ angular.module("ngDataCenter", [])
 		var defer = $q.defer();
 
 		$http({
-            //"http://119.81.167.114:7777/Index/list"
-			url: "http://119.81.167.114:7777/Index/list",
+			url: api_domain + "/Index/list",
 			method: "GET",
 			data: $.param({
 			})
@@ -29,8 +28,7 @@ angular.module("ngDataCenter", [])
 		var defer = $q.defer();
         console.log(newInfo);
 		$http({
-            //"http://119.81.167.114:7777/Index/list"
-			url: "http://119.81.167.114:7777/Index/post/",
+			url: api_domain + "/Index/post/",
 			method: "POST",
 			data: newInfo,
             headers: {
@@ -50,8 +48,7 @@ angular.module("ngDataCenter", [])
 		var defer = $q.defer();
 
 		$http({
-            //"http://119.81.167.114:7777/Index/list"
-			url: "http://119.81.167.114:7777/Content/find/index/" + id,
+			url: api_domain + "/Content/find/index/" + id,
 			method: "GET",
 			data: $.param({
                 
@@ -71,8 +68,7 @@ angular.module("ngDataCenter", [])
 		var defer = $q.defer();
         console.log('editContent', id, content);
 		$http({
-            //"http://119.81.167.114:7777/Index/list"
-			url: "http://119.81.167.114:7777/Content/update/" + id,
+			url: api_domain + "/Content/update/" + id,
 			method: "PUT",
 			data: {
                 'content': content
@@ -95,8 +91,7 @@ angular.module("ngDataCenter", [])
 		var defer = $q.defer();
         console.log('newContent', id, content);
 		$http({
-            //"http://119.81.167.114:7777/Index/list"
-			url: "http://119.81.167.114:7777/Content/post/" + id,
+			url: api_domain + "/Content/post/" + id,
 			method: "POST",
 			data: {
                 'content': content
@@ -119,8 +114,7 @@ angular.module("ngDataCenter", [])
 		var defer = $q.defer();
 
 		$http({
-            //"http://119.81.167.114:7777/Index/list"
-			url: "http://119.81.167.114:7777/Index/trace/id/" + id,
+			url: api_domain + "/Index/trace/id/" + id,
 			method: "GET",
 			data: $.param({
                 
