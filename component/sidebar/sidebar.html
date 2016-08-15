@@ -1,0 +1,14 @@
+<div ng-controller="SideBarController">
+    <script type="text/ng-template"  id="tree_item_renderer.html">
+        <a ng-href="?id={{data._id}}">{{data.displayName["繁體中文"] ? data.displayName["繁體中文"] : data.displayName["English"]}}</a>
+        <!--<button ng-click="add(data)">Add node</button>-->
+        <!--<button ng-click="delete(data)" ng-show="data.nodes.length > 0">Delete nodes</button>-->
+        <ul>
+            <li ng-repeat="data in data.nodes" ng-include="'tree_item_renderer.html'"></li>
+        </ul>
+    </script>
+    
+    <ul ng-app="Application">
+        <li ng-repeat="data in list_tree" ng-include="'tree_item_renderer.html'"></li>
+    </ul>
+</div>
